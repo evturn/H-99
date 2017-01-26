@@ -2,3 +2,4 @@
 -- Consecutive duplicates of elements are encoded as lists (N E) where N is the number of duplicates of the element E.
 
 encode :: Eq a => [a] -> [(Int, a)]
+encode xs = [(length x, head x) | x <- group xs]
